@@ -101,6 +101,15 @@ ruleTester.run("params-alignment", rule, {
              */
             const fn = ( lorem, sit ) => {}
             `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
             errors: [
                 {
                     message: "JSDoc params should be aligned",
@@ -115,6 +124,15 @@ ruleTester.run("params-alignment", rule, {
              *
              * @param {string} lorem Description.
              * @param {int} sit Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
              */
             const fn = ( lorem, sit ) => {}
             `,
@@ -135,6 +153,15 @@ ruleTester.run("params-alignment", rule, {
              */
             const fn = ( lorem, sit ) => {}
             `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
             errors: [
                 {
                     message: "JSDoc params should be aligned",
@@ -149,6 +176,15 @@ ruleTester.run("params-alignment", rule, {
              *
              * @param  {string} lorem Description.
               * @param {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
              */
             const fn = ( lorem, sit ) => {}
             `,
@@ -169,6 +205,15 @@ ruleTester.run("params-alignment", rule, {
              */
             const fn = ( lorem, sit ) => {}
             `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
             errors: [
                 {
                     message: "JSDoc params should be aligned",
@@ -183,6 +228,15 @@ ruleTester.run("params-alignment", rule, {
              *
              * @param {string} lorem Description.
              * @param {int} sit Description multi words.
+             */
+            function fn( lorem, sit ) {}
+            `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem Description.
+             * @param {int}    sit   Description multi words.
              */
             function fn( lorem, sit ) {}
             `,
@@ -205,6 +259,17 @@ ruleTester.run("params-alignment", rule, {
                 fn( lorem, sit ) {}
             }
             `,
+            output: `
+            const object = {
+                /**
+                 * Function description.
+                 *
+                 * @param {string} lorem Description.
+                 * @param {int}    sit   Description multi words.
+                 */
+                fn( lorem, sit ) {}
+            }
+            `,
             errors: [
                 {
                     message: "JSDoc params should be aligned",
@@ -220,6 +285,17 @@ ruleTester.run("params-alignment", rule, {
                  *
                  * @param {string} lorem Description.
                  * @param {int} sit Description multi words.
+                 */
+                fn( lorem, sit ) {}
+            }
+            `,
+            output: `
+            class ClassName {
+                /**
+                 * Function description.
+                 *
+                 * @param {string} lorem Description.
+                 * @param {int}    sit   Description multi words.
                  */
                 fn( lorem, sit ) {}
             }
