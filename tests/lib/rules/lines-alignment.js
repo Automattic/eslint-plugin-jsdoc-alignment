@@ -122,7 +122,8 @@ ruleTester.run("lines-alignment", rule, {
         /**
          * My object.
          *
-         * @typedef {Object} User
+         * @typedef {Object} MyObject
+         *
          * @property {string} lorem Description.
          * @property {int}    sit   Description multi words.
          */
@@ -435,7 +436,8 @@ ruleTester.run("lines-alignment", rule, {
             /**
              * My object.
              *
-             * @typedef {Object} User
+             * @typedef {Object} MyObject
+             *
              * @property {string} lorem Description.
              * @property {int} sit Description multi words.
              */
@@ -444,7 +446,8 @@ ruleTester.run("lines-alignment", rule, {
             /**
              * My object.
              *
-             * @typedef {Object} User
+             * @typedef {Object} MyObject
+             *
              * @property {string} lorem Description.
              * @property {int}    sit   Description multi words.
              */

@@ -2,6 +2,8 @@
 
 JSDoc alignment rule for ESLint.
 
+This plugin was designed just to check the alignments for the tags `param`, `arg`, `argument`, `property`, and `prop`. It can be used along [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc).
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -30,21 +32,16 @@ Add `jsdoc-alignment` to the plugins section of your `.eslintrc` configuration f
 ```
 
 
-Then configure the rules you want to use under the rules section.
+Then configure the rule to use under the rules section.
 
 ```json
 {
     "rules": {
-        "jsdoc-alignment/rule-name": 2
+        "jsdoc-alignment/lines-alignment": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-
-
-
+* The only rule in this plugin is the `lines-alignment`. Check examples in the [`lines-alignment` rule documentation](docs/rules/lines-alignment.md).
