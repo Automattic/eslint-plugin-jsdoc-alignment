@@ -88,6 +88,15 @@ ruleTester.run("lines-alignment", rule, {
             fn( lorem, sit ) {}
         }
         `,
+        `
+        /**
+         * Function description.
+         *
+         * @arg {string} lorem Description.
+         * @arg {int}    sit   Description multi words.
+         */
+        const fn = ( lorem, sit ) => {}
+        `,
     ],
 
     invalid: [
@@ -299,6 +308,32 @@ ruleTester.run("lines-alignment", rule, {
                  */
                 fn( lorem, sit ) {}
             }
+            `,
+            errors: [
+                {
+                    message: "JSDoc lines should be aligned",
+                    type: "Block",
+                },
+            ],
+        },
+        {
+            code: `
+            /**
+             * Function description.
+             *
+             * @arg {string} lorem Description.
+             * @arg {int} sit Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @arg {string} lorem Description.
+             * @arg {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
             `,
             errors: [
                 {
