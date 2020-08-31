@@ -1,4 +1,4 @@
-# Validate parameters alignment in JSDoc. (params-alignment)
+# Validate lines alignment in JSDoc. (lines-alignment)
 
 Please describe the origin of the rule here.
 

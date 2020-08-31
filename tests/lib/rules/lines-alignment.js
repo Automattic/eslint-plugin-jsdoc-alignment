@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var rule = require("../../../lib/rules/params-alignment"),
+var rule = require("../../../lib/rules/lines-alignment"),
     RuleTester = require("eslint").RuleTester;
 
 RuleTester.setDefaultConfig({
@@ -23,7 +23,7 @@ RuleTester.setDefaultConfig({
 //------------------------------------------------------------------------------
 
 var ruleTester = new RuleTester();
-ruleTester.run("params-alignment", rule, {
+ruleTester.run("lines-alignment", rule, {
     valid: [
         `
         /**
@@ -112,7 +112,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -138,7 +138,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -164,7 +164,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -190,7 +190,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -216,7 +216,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -242,7 +242,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -272,7 +272,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
@@ -302,7 +302,7 @@ ruleTester.run("params-alignment", rule, {
             `,
             errors: [
                 {
-                    message: "JSDoc params should be aligned",
+                    message: "JSDoc lines should be aligned",
                     type: "Block",
                 },
             ],
