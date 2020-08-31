@@ -36,6 +36,15 @@ ruleTester.run("lines-alignment", rule, {
         `,
         `
         /**
+         * Function description.
+         *
+         * @param {string} lorem - Description.
+         * @param {int}    sit   - Description multi words.
+         */
+        const fn = ( lorem, sit ) => {}
+        `,
+        `
+        /**
          * @param {string} lorem Description.
          * @param {int}    sit
          */
@@ -97,6 +106,27 @@ ruleTester.run("lines-alignment", rule, {
          */
         const fn = ( lorem, sit ) => {}
         `,
+        `
+        /**
+         * @namespace
+         * @property {object} defaults       Description.
+         * @property {int}    defaults.lorem Description multi words.
+         */
+        const config = {
+            defaults: {
+                lorem: 1
+            }
+        }
+        `,
+        `
+        /**
+         * My object.
+         *
+         * @typedef {Object} User
+         * @property {string} lorem Description.
+         * @property {int}    sit   Description multi words.
+         */
+        `,
     ],
 
     invalid: [
@@ -116,6 +146,32 @@ ruleTester.run("lines-alignment", rule, {
              *
              * @param {string} lorem Description.
              * @param {int}    sit   Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
+            errors: [
+                {
+                    message: "JSDoc lines should be aligned",
+                    type: "Block",
+                },
+            ],
+        },
+        {
+            code: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem - Description.
+             * @param {int} sit - Description multi words.
+             */
+            const fn = ( lorem, sit ) => {}
+            `,
+            output: `
+            /**
+             * Function description.
+             *
+             * @param {string} lorem - Description.
+             * @param {int}    sit   - Description multi words.
              */
             const fn = ( lorem, sit ) => {}
             `,
@@ -334,6 +390,64 @@ ruleTester.run("lines-alignment", rule, {
              * @arg {int}    sit   Description multi words.
              */
             const fn = ( lorem, sit ) => {}
+            `,
+            errors: [
+                {
+                    message: "JSDoc lines should be aligned",
+                    type: "Block",
+                },
+            ],
+        },
+        {
+            code: `
+            /**
+             * @namespace
+             * @property {object} defaults Description.
+             * @property {int} defaults.lorem Description multi words.
+             */
+            const config = {
+                defaults: {
+                    lorem: 1
+                }
+            }
+            `,
+            output: `
+            /**
+             * @namespace
+             * @property {object} defaults       Description.
+             * @property {int}    defaults.lorem Description multi words.
+             */
+            const config = {
+                defaults: {
+                    lorem: 1
+                }
+            }
+            `,
+            errors: [
+                {
+                    message: "JSDoc lines should be aligned",
+                    type: "Block",
+                },
+            ],
+        },
+        {
+            code: `
+            /**
+             * My object.
+             *
+             * @typedef {Object} User
+             * @property {string} lorem Description.
+             * @property {int} sit Description multi words.
+             */
+            `,
+            output: `
+            /**
+             * My object.
+             *
+             * @typedef {Object} User
+             * @property {string} lorem Description.
+             * @property {int}    sit   Description multi words.
+             */
             `,
             errors: [
                 {
