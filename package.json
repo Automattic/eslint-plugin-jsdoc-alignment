@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jsdoc-alignment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JSDoc alignment rule for ESLint.",
   "keywords": [
     "eslint",

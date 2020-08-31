@@ -44,4 +44,4 @@ Then configure the rule to use under the rules section.
 
 ## Supported Rules
 
-* The only rule in this plugin is the `lines-alignment`. Check examples in the [`lines-alignment` rule documentation](docs/rules/lines-alignment.md).
+* The only rule in this plugin is the `lines-alignment`. Check examples in the [`lines-alignment` rule documentation](https://github.com/Automattic/eslint-plugin-jsdoc-alignment/blob/master/docs/rules/lines-alignment.md).
