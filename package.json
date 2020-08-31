@@ -1,7 +1,11 @@
 {
   "name": "eslint-plugin-jsdoc-alignment",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JSDoc alignment rule for ESLint.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Automattic/eslint-plugin-jsdoc-alignment.git"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",
