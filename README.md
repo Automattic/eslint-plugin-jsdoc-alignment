@@ -1,6 +1,8 @@
-# eslint-plugin-jsdoc-alignment
+# [DEPRECATED] eslint-plugin-jsdoc-alignment
 
 JSDoc alignment rule for ESLint.
+
+**[2020-09-14] This package was deprecated in favor of [this rule](https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-check-line-alignment), introduced in `eslint-plugin-jsdoc` through [this PR](https://github.com/gajus/eslint-plugin-jsdoc/pull/636).**
 
 This plugin was designed just to check the alignments for the tags `param`, `arg`, `argument`, `property`, and `prop`. It can be used along [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc).
 
